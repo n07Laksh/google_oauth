@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
+
+.fs-5 {
+  transition: .5s ease;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0; /* Initially hide the .fs-4 element */
+  transform:translate(-50%,-50%);
+  user-select:none;
+}
+.fs-5:hover{
+  cursor:pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.avatarImage:hover + .fs-5,
+.position-relative:hover .fs-5 {
+  /* CSS rules for the .fs-4 element when hovering over the .avatarImage or .position-relative element */
+  opacity: 1; /* Show the .fs-4 element on hover */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.avatarImage:hover {
+  transition: .5s ease;
+  opacity:.3;
+  cursor:pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.errorTxt, .submitButton {
+  display:none;
 }
